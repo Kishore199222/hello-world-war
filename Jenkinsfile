@@ -9,7 +9,7 @@ metadata:
 spec:
   containers:
   - name: maven
-    image: maven 
+    image: maven:3.8.1-adoptopenjdk-11
     imagePullPolicy: Always
     command:
     - cat
