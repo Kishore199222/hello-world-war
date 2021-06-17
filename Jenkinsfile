@@ -33,12 +33,14 @@ spec:
         }
       }
     }
-    stage(docker build and push ) {
+    stage(docker build and push) {
       steps {
         container(name: 'kaniko') {
             sh '''
-            /kaniko/executor --dockerfile  `pwd`/Dockerfile --context `pwd` --destination=gcr.io/kaniko-project/executor:v$BUILD_NUMBER
-            '''  
-}}}
+             /kaniko/executor --dockerfile  `pwd`/Dockerfile --context `pwd` --destination=gcr.io/kaniko-project/executor:v$BUILD_NUMBER
+               '''  
+       }
+      }
+    }
   }
 }
