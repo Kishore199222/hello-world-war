@@ -33,7 +33,7 @@ spec:
         }
       }
     }
-    stage(docker build and push) {
+    stage('docker build and push') {
       steps {
         container(name: 'kaniko') {
             sh '''
