@@ -44,7 +44,7 @@ spec:
       steps {
         container(name: 'maven') {
             sh '''
-            # mvn clean install
+             mvn clean install
             '''
         }
       }
@@ -53,7 +53,7 @@ spec:
       steps {
         container(name: 'kaniko') {
             sh '''
-            #/kaniko/executor --dockerfile  `pwd`/Dockerfile --context `pwd` --destination gcr.io/eng-origin-313113/quickstart-image:v$BUILD_NUMBER
+             /kaniko/executor --dockerfile  `pwd`/Dockerfile --context `pwd` --destination gcr.io/eng-origin-313113/quickstart-image:v$BUILD_NUMBER
             '''  
      }
     }
@@ -64,6 +64,7 @@ spec:
             sh '''
              gcloud container clusters get-credentials guru123 --zone us-central1-c --project eng-origin-313113
              helm ls
+             helm install tsetdep tsetdep/ --set image.tag=v$BUILD_NUMBER
              '''
       }
     }
