@@ -62,7 +62,7 @@ spec:
       steps {
         container(name: helm){
             sh '''
-             helm install tsetdep tsetdep/
+             helm ls
              '''
       }
     }
