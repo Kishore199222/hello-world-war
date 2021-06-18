@@ -9,7 +9,7 @@ metadata:
 spec:
   containers:
   - name: helm
-    image: helm
+    image: dtzar/helm-kubectl
     imagePullPolicy: Always
     command:
     - cat
