@@ -9,7 +9,7 @@ metadata:
 spec:
   containers:
   - name: helm
-    image: gcr.io/eng-origin-313113/xyz
+    image: bitnami/kubectl
     imagePullPolicy: Always
     command:
     - cat
