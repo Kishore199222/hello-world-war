@@ -8,7 +8,7 @@ image:
   repository: gcr.io/eng-origin-313113/quickstart-image
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "v$BUILD_NUMBER"
+  tag: ""
 
 imagePullSecrets: []
 nameOverride: ""
