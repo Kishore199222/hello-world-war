@@ -9,7 +9,7 @@ metadata:
 spec:
   containers:
   - name: helm
-    image: alpine/helm
+    image: quay.io/evl.ms/gcloud-helm:338.0.0
     imagePullPolicy: Always
     command:
     - cat
@@ -62,6 +62,7 @@ spec:
       steps {
         container(name: 'helm'){
             sh '''
+             gcloud container clusters get-credentials guru123 --zone us-central1-c --project eng-origin-313113
              helm ls
              '''
       }
