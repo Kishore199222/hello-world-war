@@ -44,7 +44,7 @@ spec:
       steps {
         container(name: 'maven') {
             sh '''
-             mvn clean install
+            # mvn clean install
             '''
         }
       }
@@ -53,7 +53,7 @@ spec:
       steps {
         container(name: 'kaniko') {
             sh '''
-            /kaniko/executor --dockerfile  `pwd`/Dockerfile --context `pwd` --destination gcr.io/eng-origin-313113/quickstart-image:v$BUILD_NUMBER
+            #/kaniko/executor --dockerfile  `pwd`/Dockerfile --context `pwd` --destination gcr.io/eng-origin-313113/quickstart-image:v$BUILD_NUMBER
             '''  
      }
     }
@@ -62,7 +62,7 @@ spec:
       steps {
         container(name: helm){
             sh '''
-             helm ls
+             ls
              '''
       }
     }
