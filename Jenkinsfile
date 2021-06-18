@@ -62,7 +62,7 @@ spec:
       steps {
         container(name: 'helm'){
             sh '''
-             ls
+             helm ls
              '''
       }
     }
