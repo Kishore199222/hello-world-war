@@ -9,7 +9,7 @@ metadata:
 spec:
   containers:
   - name: helm
-    image: alpine/helm
+    image: helm
     imagePullPolicy: Always
     command:
     - cat
