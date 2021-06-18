@@ -62,8 +62,7 @@ spec:
       steps {
         container(name: 'helm'){
             sh '''
-             gcloud container clusters get-credentials guru123 --zone us-central1-c --project eng-origin-313113
-             helm ls
+             ls
              '''
       }
     }
