@@ -9,7 +9,7 @@ metadata:
 spec:
   containers:
   - name: helm
-    image: bitnami/kubectl
+    image: gcr.io/eng-origin-313113/xyz
     imagePullPolicy: Always
     command:
     - cat
@@ -60,9 +60,9 @@ spec:
    }
     stage('deploy'){
       steps {
-        container(name: helm){
+        container(name: 'helm'){
             sh '''
-             ls
+             helm ls
              '''
       }
     }
