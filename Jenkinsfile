@@ -9,7 +9,7 @@ metadata:
 spec:
   containers:
   - name: helm
-    image: dtzar/helm-kubectl
+    image: kiwigrid/gcloud-kubectl-helm
     imagePullPolicy: Always
     command:
     - cat
