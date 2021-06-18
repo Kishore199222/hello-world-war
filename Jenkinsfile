@@ -24,14 +24,18 @@ spec:
     image: gcr.io/kaniko-project/executor:latest
     imagePullPolicy: Always
     command:
-    - cat
+    - /busybox/cat
     tty: true
     volumeMounts:
     - name: kaniko-secret
       mountPath: /secret
     env:
     - name: GOOGLE_APPLICATION_CREDENTIALS
+<<<<<<< HEAD
       value: /secret/kaniko-secret.json
+=======
+      value: /secret/eng-origin-313113-35cb905c077e.json
+>>>>>>> b135f24b3540c9ccaa1786b1c4bc4bca476d9f78
   volumes:
   - name: kaniko-secret
     secret:
@@ -53,7 +57,11 @@ spec:
       steps {
         container(name: 'kaniko') {
             sh '''
+<<<<<<< HEAD
             /kaniko/executor --dockerfile  `pwd`/Dockerfile --context `pwd` --destination=docker push gcr.io/eng-origin-313113/quickstart-image:v$BUILD_NUMBER
+=======
+            /kaniko/executor --dockerfile  `pwd`/Dockerfile --context `pwd` --destination gcr.io/eng-origin-313113/quickstart-image:v$BUILD_NUMBER
+>>>>>>> b135f24b3540c9ccaa1786b1c4bc4bca476d9f78
             '''  
      }
     }
