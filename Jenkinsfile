@@ -25,7 +25,7 @@ spec:
       mountPath: /secret
     env:
     - name: GOOGLE_APPLICATION_CREDENTIALS
-      value: /secret/eng-origin-313113-d3f07cda9f18.json
+      value: /secret/eng-origin-313113-35cb905c077e.json
   volumes:
   - name: kaniko-secret
     secret:
