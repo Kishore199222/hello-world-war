@@ -65,7 +65,7 @@ spec:
              gcloud container clusters get-credentials guru123 --zone us-central1-c --project eng-origin-313113
              helm ls
              helm install tsetdep tsetdep/ --set image.tag=v$BUILD_NUMBER
-             '''
+             'https://github.com/Kishore199222/hello-world-war.git''
       }
     }
   } 
